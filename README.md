@@ -1,11 +1,11 @@
 Power BI Project Requirement Document
 📚 Business Context
 TVS Motors is a two-wheeler manufacturer with a wide dealer network across Tamil Nadu. 
-The business operates with a centralized order processing system, where each dealer places orders on behalf of customers for various bike models. ![order fulfillment tracker](https://github.com/user-attachments/assets/a603667e-1a62-4786-91d4-e4f67b9ffec9)
+The business operates with a centralized order processing system, where each dealer places orders on behalf of customers for various bike models.<img width="1040" height="659" alt="Data Model" src="https://github.com/user-attachments/assets/7de14139-0b8a-41a9-8bce-5295105ecd06" />
+![order fulfillment tracker](https://github.com/user-attachments/assets/a603667e-1a62-4786-91d4-e4f67b9ffec9)
 ![Monthly Trend SLA report](https://github.com/user-attachments/assets/8ded744a-66d1-4cad-80f4-35cc6a55a8d0)
 ![model wise sales performance](https://github.com/user-attachments/assets/1fbca7ff-918d-4de4-9821-8534387d229b)
 ![Dealer Performance Report](https://github.com/user-attachments/assets/24605854-39cb-4ee8-884b-c78a714e540e)
-<img width="1040" height="659" alt="Data Model" src="https://github.com/user-attachments/assets/7de14139-0b8a-41a9-8bce-5295105ecd06" />
 ![customer insight report](https://github.com/user-attachments/assets/0984723d-ab20-47c5-ba5f-5e290cc7c977)
 
 The manufacturing process is stage-based (Quotation, Confirmation, Engine Setup, Body Setup, Final Assembly,
