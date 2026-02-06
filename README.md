@@ -8,49 +8,74 @@ The business operates with a centralized order processing system, where each dea
 ![Dealer Performance Report](https://github.com/user-attachments/assets/24605854-39cb-4ee8-884b-c78a714e540e)
 ![customer insight report](https://github.com/user-attachments/assets/0984723d-ab20-47c5-ba5f-5e290cc7c977)
 
-The manufacturing process is stage-based (Quotation, Confirmation, Engine Setup, Body Setup, Final Assembly,
-QC, Delivery Start, Delivered), and each order can take 30-45 days to complete. The business wants to track delays, 
-dealer performance, customer behavior, and model-wise trends using Power BI.
+🚲 Manufacturing Order Tracking & Dealer Performance Analytics (Power BI)
+📌 Project Overview
+This Power BI project analyzes a stage-based manufacturing and delivery process in a two-wheeler business.
+Each order moves through multiple stages and typically takes 30–45 days to complete.
 
-🔍 Objective
-To monitor dealer performance, order fulfillment stages, delay patterns, and customer insights using a centralized Power BI dashboard with advanced DAX features and dynamic KPIs.
+The dashboard enables business stakeholders to:
+Track dealer performance-Identify delivery delays and SLA breaches-Analyze customer behavior-Understand model-wise demand and fulfillment efficiency
 
-🔢 Report-wise KPIs and Metrics
-Dealer Performance Report
+**This project focuses on business KPIs, data modeling, and advanced DAX, not just visuals.**
 
-•	- Total Orders Per Dealer – Number of orders placed by each dealer.
-•	- Avg Delivery Time – Average days between order and delivery.
-•	- On-Time Delivery % – Percentage of orders delivered on or before expected date.
-•	- Delayed Orders Count – Number of orders delivered late.
-•	- Dealer SLA Compliance Score – Weighted score based on delivery timelines.
+**🏭 Business Process**
 
-Order Fulfillment Tracker
-
-•	- Orders in Each Stage – Count of orders currently in each delivery stage.
-•	- Completed Orders – Orders that reached 'Delivered' stage.
-•	- In-Progress Orders – Orders yet to be delivered.
-•	- Delivery  Duration (Average) – Time taken by each dealer for their delivery
-•	- Recent Stage Update Timestamp – Last updated timestamp to track freshness.
-•	- Fulfillment SLA Breach Count – Orders exceeding stage deadlines.
-
-Model-Wise Sales Performance
-
-•	- Total Orders by Model – Number of orders for each bike model.
-•	- Revenue Estimation – Sum of On_Road_Price × Quantity (assumed 1 per order).
-•	- Most Preferred Categories – Category-wise order split.
-•	- Fuel Type Comparison – Petrol vs Electric model share.
-•	- Avg Delivery Time by Model – Model-wise fulfillment efficiency.
-
-Customer Insights Report
-
-•	- Repeat Customers Count – Customers with more than one order.
-•	- Orders by Gender – Male vs Female buyers.
-•	- Customer Age Band Distribution – Age-group-wise order count.
-•	- City-wise Customers – Orders segmented by customer city.
-
-Monthly Trend & SLA Report
-
-•	- Monthly Order Volume – Count of orders each month.
-•	- Monthly On-Time % – SLA performance trend.
-•	- Avg Monthly Delivery Days – Timeline benchmark analysis.
-•	- Monthly Delayed Orders – Count of late deliveries by month.
+Order Lifecycle Stages:Quotation-Confirmation-Engine Setup-Body Setup-Final Assembly-Quality Check (QC)-Delivery Start-Delivered
+#Orders may experience stage-wise or overall delays, impacting dealer SLAs and customer satisfaction.
+🎯 Project Objectives
+Monitor dealer-wise order fulfillment performance-Track stage-level bottlenecks and delays-Measure SLA compliance-Analyze customer demographics and repeat behavior-Identify model-wise demand and delivery efficiency-Provide monthly trends for management decisions
+**📊 Reports & KPIs**
+**1️⃣ Dealer Performance Report**
+Purpose: Evaluate dealer reliability and SLA adherence.
+Key KPIs:Total Orders per Dealer-Average Delivery Time (Days)-On-Time Delivery %-Delayed Orders Count-Dealer SLA Compliance Score-Weighted score based on on-time vs delayed deliveries
+Business Impact:
+Helps management identify high-performing dealers and penalize chronic defaulters.
+**2️⃣ Order Fulfillment Tracker**
+Purpose: Operational visibility into order status and delays.
+Key KPIs:Orders in Each Stage (live pipeline)-Completed Orders (Delivered)-In-Progress Orders-Average Delivery Duration by Dealer-Last Stage Update Timestamp-SLA Breach Count (stage-level & overall)
+Business Impact:
+Early detection of bottlenecks in manufacturing or logistics.
+**3️⃣ Model-Wise Sales Performance**
+Purpose: Understand product demand and fulfillment efficiency.
+Key KPIs:Total Orders by Model-Revenue Estimation(On_Road_Price × Quantity)-Category Preference Analysis-Fuel Type Split (Petrol vs Electric)-Avg Delivery Time by Model
+Business Impact:
+Supports inventory planning, production prioritization, and EV adoption strategy.
+**4️⃣ Customer Insights Report**
+Purpose: Analyze buyer behavior and demographics.
+Key KPIs:Repeat Customers Count-Orders by Gender-Customer Age Band Distribution-City-wise Customer Orders
+Business Impact:
+Enables targeted marketing, loyalty programs, and region-based sales planning.
+**5️⃣ Monthly Trend & SLA Analysis**
+Purpose: Track performance trends over time.
+Key KPIs:Monthly Order Volume-Monthly On-Time Delivery %-Average Monthly Delivery Days-Monthly Delayed Orders
+Business Impact:
+Helps leadership measure operational improvements and seasonal demand patterns.
+**🧠 Data Modeling Approach**
+Star Schema Design
+Fact Table: Orders
+Dimension Tables: Dealer, Customer, Model, Date, Stage
+Proper date intelligence enabled via a Date table
+Optimized relationships for performance
+**📐 Key DAX Measures Used**
+Delivery Duration Calculations
+On-Time vs Delayed Classification
+SLA Compliance Percentage
+Repeat Customer Identification
+Month-over-Month Trend Metrics
+Dynamic KPIs with conditional formatting
+(DAX logic written to be scalable and reusable)
+**🛠️ Tools & Technologies**
+Power BI Desktop
+DAX (Advanced Measures)
+Power Query (Data Transformation)
+Star Schema Data Modeling
+**📈 Outcome & Value**
+Single source of truth for order tracking
+Reduced manual tracking of dealer delays
+Improved decision-making using KPIs
+Scalable dashboard design for future enhancements
+**🔮 Future Enhancements**
+Predictive delay analysis
+Dealer ranking & penalty logic
+Export-ready management reports
+Integration with real-time order systems
