@@ -24,38 +24,46 @@ Order Lifecycle Stages:Quotation-Confirmation-Engine Setup-Body Setup-Final Asse
 #Orders may experience stage-wise or overall delays, impacting dealer SLAs and customer satisfaction.
 🎯 Project Objectives
 Monitor dealer-wise order fulfillment performance-Track stage-level bottlenecks and delays-Measure SLA compliance-Analyze customer demographics and repeat behavior-Identify model-wise demand and delivery efficiency-Provide monthly trends for management decisions
+
 **📊 Reports & KPIs**
+
 **1️⃣ Dealer Performance Report**
 Purpose: Evaluate dealer reliability and SLA adherence.
 Key KPIs:Total Orders per Dealer-Average Delivery Time (Days)-On-Time Delivery %-Delayed Orders Count-Dealer SLA Compliance Score-Weighted score based on on-time vs delayed deliveries
 Business Impact:
 Helps management identify high-performing dealers and penalize chronic defaulters.
+
 **2️⃣ Order Fulfillment Tracker**
 Purpose: Operational visibility into order status and delays.
 Key KPIs:Orders in Each Stage (live pipeline)-Completed Orders (Delivered)-In-Progress Orders-Average Delivery Duration by Dealer-Last Stage Update Timestamp-SLA Breach Count (stage-level & overall)
 Business Impact:
 Early detection of bottlenecks in manufacturing or logistics.
+
 **3️⃣ Model-Wise Sales Performance**
 Purpose: Understand product demand and fulfillment efficiency.
 Key KPIs:Total Orders by Model-Revenue Estimation(On_Road_Price × Quantity)-Category Preference Analysis-Fuel Type Split (Petrol vs Electric)-Avg Delivery Time by Model
 Business Impact:
 Supports inventory planning, production prioritization, and EV adoption strategy.
+
 **4️⃣ Customer Insights Report**
 Purpose: Analyze buyer behavior and demographics.
 Key KPIs:Repeat Customers Count-Orders by Gender-Customer Age Band Distribution-City-wise Customer Orders
 Business Impact:
 Enables targeted marketing, loyalty programs, and region-based sales planning.
+
 **5️⃣ Monthly Trend & SLA Analysis**
 Purpose: Track performance trends over time.
 Key KPIs:Monthly Order Volume-Monthly On-Time Delivery %-Average Monthly Delivery Days-Monthly Delayed Orders
 Business Impact:
 Helps leadership measure operational improvements and seasonal demand patterns.
+
 **🧠 Data Modeling Approach**
 Star Schema Design
 Fact Table: Orders
 Dimension Tables: Dealer, Customer, Model, Date, Stage
 Proper date intelligence enabled via a Date table
 Optimized relationships for performance
+
 **📐 Key DAX Measures Used**
 Delivery Duration Calculations
 On-Time vs Delayed Classification
@@ -64,16 +72,19 @@ Repeat Customer Identification
 Month-over-Month Trend Metrics
 Dynamic KPIs with conditional formatting
 (DAX logic written to be scalable and reusable)
+
 **🛠️ Tools & Technologies**
 Power BI Desktop
 DAX (Advanced Measures)
 Power Query (Data Transformation)
 Star Schema Data Modeling
+
 **📈 Outcome & Value**
 Single source of truth for order tracking
 Reduced manual tracking of dealer delays
 Improved decision-making using KPIs
 Scalable dashboard design for future enhancements
+
 **🔮 Future Enhancements**
 Predictive delay analysis
 Dealer ranking & penalty logic
